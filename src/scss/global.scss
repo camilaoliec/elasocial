@@ -1,0 +1,17 @@
+@import './mixins';
+@import './variables';
+
+
+*{
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 22px;
+}
+a{
+    text-decoration: none;
+}
