@@ -1,5 +1,5 @@
-@import './mixins';
-@import './variables';
+@use './mixins' as *;
+@use './variables' as *;
 
 
 *{
@@ -11,7 +11,15 @@
 html {
   scroll-behavior: smooth;
   font-size: 22px;
+  background-color: $color-background;
 }
-a{
+.menu{
     text-decoration: none;
+    color: inherit;
+}
+h1{
+  font-family: $font-secundary;
+  font-size: 35px;
+  margin-bottom: 40px;
+  font-weight: lighter;
 }

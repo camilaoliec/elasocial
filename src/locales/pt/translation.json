@@ -1,1 +1,20 @@
-{}
+{
+    "nav": {
+    "home": "INICIO",
+    "about me": "SOBRE MIM",
+    "services": "SERVIÇOS",
+    "contact": "CONTATO"
+  },
+    "home": {
+    "section-work": {
+      "title": "Com quem trabalhamos?"
+    },
+    "section-customer": {
+      "title": "O que dizem nossos clientes..."
+    }
+  },
+  "footer": {
+    "description": "Ana Rosewarne | ElaSocial — Estrategista de conteúdo e Social Media",
+    "copyright": "Todos os direitos reservados."
+  }
+}

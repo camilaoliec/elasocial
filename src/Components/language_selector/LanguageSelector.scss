@@ -1,0 +1,47 @@
+@use '../../scss/variables' as *;
+
+.box_language-selector{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 20px 70px 0 0;
+    gap: 9px;
+    cursor: pointer;
+    user-select: none;
+    p{
+        font-weight: bolder;
+        font-family: $font-primary;
+        font-size: 18px;
+        color: $orange-super-light;
+        transition: color 0.3s ease;
+        &.active{
+            color: $orange-light;
+        }
+    }
+    .language-selector{
+        width: 50px;
+        height: 30px;
+        border-radius: 20px;
+        border: 3px solid $orange-light;
+        background-color: #F0F0F0;
+        display: flex;
+        align-items: center;
+        transition: background-color 0.3s ease;
+        .selector{
+            height: 25px;
+            width: 25px;
+            background-color: $orange-light;
+            border-radius: 50px;
+            transition: transform 0.3s ease;
+        }
+        &.pt .selector{
+            transform: translateX(0);
+        }
+        &.en .selector{
+            transform: translateX(20px);
+        }
+    }
+}
+
+

@@ -1,3 +1,20 @@
 {
-  "welcome": "bem-vindo"
+  "nav": {
+    "home": "HOME",
+    "about me": "ABOUT ME",
+    "services": "SERVICES",
+    "contact": "CONTACT"
+  },
+  "home": {
+    "section-work": {
+      "title": "Who do we work with?"
+    },
+    "section-customer": {
+      "title": "what our clients say about us..."
+    }
+  },
+  "footer": {
+    "description": "Ana Rosewarne | ElaSocial — Content Strategist & Social Media",
+    "copyright": "All rights reserved."
+  }
 }
