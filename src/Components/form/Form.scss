@@ -1,0 +1,33 @@
+@use '../../scss/variables.scss' as*;
+
+form{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid  $orange-dark;
+    border-radius: 20px;
+    width: 600px;
+    padding: 40px;
+    gap: 15px;
+    margin-left: 200px;
+    background-color: $orange-light;
+    font-family: $font-secundary;
+    font-weight: 600;
+    label{
+        color: white;
+    }
+    input{
+        height: 30px;
+    }
+    input::placeholder, textarea::placeholder{
+        padding: 10px;
+        color: $orange-light;
+        font-size: 16px;
+        font-family: $font-primary;
+        font-weight: 600;
+    }
+    .contact__submit{
+        width: 200px;
+        height: 30px;
+        align-self: self-end;
+    }
+}

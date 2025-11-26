@@ -1,0 +1,56 @@
+@use "../../scss/variables" as *;
+
+
+.testimonial__container{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    .testimonial-card{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 25px;
+    border-radius: 20px;
+    background-color: $green-dark;
+    }
+    .testimonial-card{
+        display: flex;
+        gap: 0;
+        height: auto;
+        min-height: 380px;
+        .quote_left{
+            width: 30px;
+            background-color: $color-background;
+            border-radius: 20px;
+            padding: 4px;
+            align-self: flex-start;
+        }
+        .quote_right{
+            align-self: flex-end;
+            width: 30px;
+        }
+        p{
+            padding: 30px 40px 0;
+            color: $color-background;
+            font-family: $font-primary;
+            font-size: 25px;
+            height: autopx;
+            flex-grow: 1;
+            margin-bottom: 5px;
+        }
+        h3{
+            color: $green-light;
+            font-family: $font-secundary;
+            font-weight: 800;
+            margin: 10px 0 5px;
+            font-size: 25px;
+        }
+        h4{
+            font-family: $font-secundary;
+            color: $green-light;
+            font-weight: 300;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    }
+}
