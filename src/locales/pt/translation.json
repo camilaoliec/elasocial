@@ -1,16 +1,33 @@
 {
     "nav": {
-    "home": "INICIO",
-    "about me": "SOBRE MIM",
-    "services": "SERVIÇOS",
-    "contact": "CONTATO"
+    "home": "Inicio",
+    "about me": "Sobre mim",
+    "services": "Serviços",
+    "contact": "Contato"
   },
     "home": {
     "section-work": {
       "title": "Com quem trabalhamos?"
     },
-    "section-customer": {
-      "title": "O que dizem nossos clientes..."
+    "section-testimonials": {
+      "title": "O que dizem nossos clientes...",
+      "comments": [
+        {
+          "comment": "A Ana transformou completamente a presença digital da minha marca! O conteúdo ficou autêntico e conectado ao que eu realmente queria transmitir. Recomendo de olhos fechados.",
+          "name": "Maria Duarte",
+          "profession": "Empresária"
+        },
+        {
+          "comment": "Trabalhar com a Ela Social foi uma experiência leve e inspiradora. Eles entenderam meu estilo e souberam destacar meu trabalho de forma profissional e criativa.",
+          "name": "Lucas Ferreira",
+          "profession": "Fotógrafo"
+        },
+        {
+          "comment": "A estratégia desenvolvida trouxe resultados reais em engajamento e novos clientes. Além disso, o atendimento foi impecável e sempre muito atencioso.",
+          "name": "Renata Oliveira",
+          "profession": "Coach de Carreira"
+        }
+      ]
     }
   },
   "footer": {

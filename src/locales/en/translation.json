@@ -1,20 +1,37 @@
 {
   "nav": {
-    "home": "HOME",
-    "about me": "ABOUT ME",
-    "services": "SERVICES",
-    "contact": "CONTACT"
+    "home": "Home",
+    "about me": "About me",
+    "services": "Services",
+    "contact": "Contact"
   },
   "home": {
     "section-work": {
       "title": "Who do we work with?"
     },
-    "section-customer": {
-      "title": "what our clients say about us..."
+    "section-testimonials": {
+      "title": "what our clients say about us...",
+      "comments": [
+        {
+          "comment": "Ana completely transformed my brand’s digital presence! The content felt authentic and aligned with what I truly wanted to communicate. I highly recommend her work.",
+          "name": "Maria Duarte",
+          "profession": "Entrepreneur"
+        },
+        {
+          "comment": "Working with Ela Social was a light and inspiring experience. They understood my style perfectly and showcased my work in a professional and creative way.",
+          "name": "Lucas Ferreira",
+          "profession": "Photographer"
+        },
+        {
+          "comment": "The strategy they created brought real results in engagement and new clients. Plus, the service was impeccable and always very attentive.",
+          "name": "Renata Oliveira",
+          "profession": "Career Coach"
+        }
+      ]
     }
   },
   "footer": {
-    "description": "Ana Rosewarne | ElaSocial — Content Strategist & Social Media",
+    "description": "Ana Rosewarne | ElaSocial — Communication & Creative Consultant",
     "copyright": "All rights reserved."
   }
 }

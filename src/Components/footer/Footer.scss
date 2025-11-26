@@ -1,0 +1,32 @@
+@use '../../scss/variables' as *;
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40px; 
+    padding: 30px;
+    height: 339px;
+    .footer__texts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        .footer__texts-description{
+            font-size: 21px;
+            color: $orange-light;
+        }
+        .footer__texts-copyright{
+            font-size: 18px;
+            color: $orange-light;
+        }
+    }
+    .footer__links{
+        display: flex;
+        gap: 20px;
+        img{
+            width: 32px;
+            color: $orange-light;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@use '../../scss/_variables' as *;
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .logo{
+        width: 100%;
+        height: 241px;
+        background-color: $green-light;
+        display: flex;
+        justify-content: center;
+        img{
+            width: 700px;
+        }
+    }
+    .nav__menu-container{
+        width: 100%;
+        ul{
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            justify-content: center;
+            li{
+                margin-top: 10px;
+                list-style: none;
+                .menu{
+                    color: $orange-light;
+                    font-weight: bolder;
+                    font-family: $font-secundary;
+                    text-decoration: none;
+                    padding: 5px 10px;
+                    transition: box-shadow 0.3s ease, transform 0.2s ease;
+                     font-size: 22px;
+                    &:hover{
+                        color: $orange-dark;
+                    }
+                    &.active{
+                        color: $green-dark;
+                        //color: $orange-dark;
+                    }
+                }
+            }
+        }
+    }
+}
