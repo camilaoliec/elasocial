@@ -1,0 +1,19 @@
+@use "../../scss/variables" as *;
+
+section{
+    padding: 70px;
+}
+h1{
+    text-align: center;
+}
+.work__section{
+    .work__title h1{
+        color: $orange-light;
+    }
+}
+.testimonials__section{
+    background-color: $green-light;
+    h1{
+        color: $green-dark;
+    }
+}

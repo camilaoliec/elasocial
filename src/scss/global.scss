@@ -1,6 +1,4 @@
-@use './mixins' as *;
 @use './variables' as *;
-
 
 *{
     border: none;
@@ -13,13 +11,9 @@ html {
   font-size: 22px;
   background-color: $color-background;
 }
-.menu{
-    text-decoration: none;
-    color: inherit;
-}
 h1{
   font-family: $font-secundary;
-  font-size: 35px;
+  font-size: 64px;
   margin-bottom: 40px;
   font-weight: lighter;
 }

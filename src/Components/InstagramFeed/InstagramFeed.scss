@@ -1,0 +1,83 @@
+
+.insta_container{
+    position: relative;
+    width: 100%;
+    .insta_btn{
+        position: absolute;
+        top: 55%;
+        transform: translateY(-50px);
+        z-index: 20;
+        background-color: white;
+        border: none;
+        padding: 12px 16px;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: opacity 0.2s ease;
+        &.left{
+            left: 0;
+            margin-left: 30px;
+        }
+        &.right{
+            right: 0;
+            margin-right: 30px;
+        }
+        &:disabled{
+            opacity: 0.2;
+            cursor: default;
+        }
+    }
+    .insta_feed{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        overflow: hidden;
+        .insta_track{
+            display: flex;
+            transition: transform 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+            gap: 15px;
+        }
+        .insta_card{
+            width: 334px;
+            height: auto;
+            aspect-ratio: 3/5;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+            .carousel-badge{
+                position: absolute;
+                top: 8px;
+                right: 8px;
+                background: rgba(0,0,0,0.6);
+                color: white;
+                padding: 4px 6px;
+                font-size: 14px;
+                border-radius: 4px;
+                pointer-events: none;
+            }
+            .overlay{
+                position: absolute;
+                inset: 0;
+                background-color: rgba(94, 55, 14, 0.55);
+                opacity: 0;
+                transition: opacity 1.5s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                &:hover{
+                    opacity: 1;
+                }
+                .caption{
+                    color: white;
+                    font-size: 18px;
+                    line-height: 1.4;
+                    padding: 30px;
+                }
+            }
+        }
+    }
+}
