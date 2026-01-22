@@ -5,10 +5,20 @@ section{
 }
 h1{
     text-align: center;
+    color: $green-dark;
 }
-.work__section{
-    .work__title h1{
-        color: $orange-light;
+.presentation__section{
+    h1{
+        color: $green-dark;
+        margin: 0;
+    }
+    h2{
+        font-family: $font-secundary;
+        font-size: 32px;
+        font-weight: 100;
+        font-style: italic;
+        color: $green-dark;
+        text-align: center;
     }
 }
 .testimonials__section{

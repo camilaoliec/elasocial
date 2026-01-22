@@ -1,0 +1,136 @@
+@use '../../scss/variables' as *;
+
+.lightbox_overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+  .lightbox_container {
+    position: relative;
+    background-color: white;
+    width: 60%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    .lightbox_media{
+      height: 100%;
+      position: relative;
+      .lightbox_img,
+      .lightbox_video {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 3/5;
+        max-height: 100%;
+      }
+      .lightbox_img{
+        object-fit: container;
+      }
+      .lightbox_video{
+        object-fit: cover;
+      }
+    }
+    .lightbox_carousel_nav{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      padding: 20px;
+      z-index: 10;
+      color: $green-dark;
+      background-color: $green-light;
+    }
+    .lightbox_carousel_nav.left { 
+      left: 20px;
+    }
+    .lightbox_carousel_nav.right {
+      right: 20px;
+    }
+    .lightbox_info{
+      width: 55%;
+      height: auto;
+      margin: 30px;
+
+      overflow-y: auto;
+      .lightbox_user{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-bottom: 20px;
+        img{
+          width: 110px;
+          border-radius: 50%;
+        }
+        .lightbox_username{
+          font-weight: bold;
+        }
+      } 
+      .lightbox_caption {
+        
+        overflow-wrap: break-word;     
+      }
+      .details{
+        .likes{
+          display: flex;
+          flex-direction: row;
+          gap: 5px;
+          margin: 10px 0;
+          padding: 10px 0;
+          border-top: 1px rgb(212, 205, 205) solid;
+          img{
+            width: 25px;
+          }
+          p{
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .lightbox_close {
+      position: absolute;
+      top: -10px;
+      right: -280px;
+      color: white;
+      background-color: transparent;
+      padding: 0;
+      border: none;
+      font-size: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    
+    .lightbox_nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: white;
+      border: none;
+      padding: 10px;
+      border-radius: 50px;
+      cursor: pointer;
+      img{
+        width: 30px;
+      }
+    }
+    
+    .lightbox_nav.left {
+      left: -250px;
+    }
+    
+    .lightbox_nav.right {
+      right: -250px;
+    }
+  }
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

@@ -47,11 +47,13 @@
             cursor: pointer;
             transition: transform 0.2s ease;
             flex-shrink: 0;
-            .carousel-badge{
+            .carousel-badge img{
+                width: 40px;
+                height: 40px;
                 position: absolute;
                 top: 8px;
                 right: 8px;
-                background: rgba(0,0,0,0.6);
+                background: rgba(0, 0, 0, 0.248);
                 color: white;
                 padding: 4px 6px;
                 font-size: 14px;
@@ -79,5 +81,27 @@
                 }
             }
         }
+        .insta_video_card {
+            width: 334px;
+            height: auto;
+            aspect-ratio: 3/5;
+            overflow: hidden;
+            position: relative;
+            flex-shrink: 0;
+        }
     }
+}
+.icon_ig_video img{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.248);
+    color: white;
+    padding: 4px 6px;
+    font-size: 14px;
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: 10;
 }
