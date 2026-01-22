@@ -6,8 +6,14 @@
     "contact": "Contato"
   },
     "home": {
-    "section-work": {
-      "title": "Com quem trabalhamos?"
+    "section-presentation": {
+      "title": "O Ela Social Não é só um hub criativo",
+      "subtitle": "é um ecossistema de bem-estar produtivo para mulheres empreendedoras",
+      "circle-caption":{
+        "about": "Sobre mim",
+        "services": "Serviços",
+        "contact": "contato"
+      }
     },
     "section-testimonials": {
       "title": "O que dizem nossos clientes...",
@@ -28,6 +34,9 @@
           "profession": "Coach de Carreira"
         }
       ]
+    },
+    "section-instagram": {
+      "title": "Quer nos seguir no Instagram?"
     }
   },
   "footer": {

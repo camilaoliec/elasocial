@@ -6,8 +6,14 @@
     "contact": "Contact"
   },
   "home": {
-    "section-work": {
-      "title": "Who do we work with?"
+    "section-presentation": {
+      "title": "Ela Social is not just a creative hub",
+      "subtitle": "It is a productive wellness ecosystem for women entrepreneurs.",
+      "circle-caption":{
+        "about": "About",
+        "services": "Services",
+        "contact": "contact"
+      }
     },
     "section-testimonials": {
       "title": "what our clients say about us...",
@@ -28,6 +34,9 @@
           "profession": "Career Coach"
         }
       ]
+    },
+    "section-instagram": {
+      "title": "Want to stalk us on Instagram?"
     }
   },
   "footer": {
