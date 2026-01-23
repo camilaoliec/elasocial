@@ -4,7 +4,7 @@ import "./Home.scss"
 import Testimonials from '../../Components/testimonials/Testimonials'
 import InstagramFeed from '../../Components/instaFeed/InstagramFeed'
 import CirclesContainer from '../../Components/circlesContainer/CirclesContainer'
-import Banner from '../../Components/banner/banner'
+import Banner from '../../Components/banner/Banner'
 
 
 const Home = () => {

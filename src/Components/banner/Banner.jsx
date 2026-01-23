@@ -1,7 +1,7 @@
 import React from 'react'
 import useEmblaCarousel from "embla-carousel-react"
 import { useState, useEffect, useCallback } from 'react'
-import "./banner.scss"
+import "./Banner.scss"
 
 import arrowLeft from "../../assets/arrow-left.svg"
 import arrowRight from "../../assets/arrow-right.svg"
