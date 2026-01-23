@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchInstagramPosts, fetchInstagramProfile } from '../../api/instagram';
-import InstagramPostCard from './instagramPostCard'; 
+import InstagramPostCard from './InstagramPostCard'; 
 import InstagramLightbox from './InstagramLightbox';
 import "./InstagramFeed.scss";
 
