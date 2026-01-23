@@ -1,8 +1,8 @@
-import React from 'react'
+
 import { useTranslation } from 'react-i18next'
 import "./Home.scss"
 import Testimonials from '../../Components/testimonials/Testimonials'
-import InstagramFeed from '../../Components/instagramFeed/InstagramFeed'
+import InstagramFeed from '../../Components/instaFeed/InstagramFeed'
 import CirclesContainer from '../../Components/circlesContainer/CirclesContainer'
 import Banner from '../../Components/banner/banner'
 
