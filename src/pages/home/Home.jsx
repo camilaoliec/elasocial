@@ -2,16 +2,16 @@
 import { useTranslation } from 'react-i18next'
 import "./Home.scss"
 import Testimonials from '../../Components/testimonials/Testimonials'
-import InstagramFeed from '../../Components/instaFeed/InstagramFeed'
 import CirclesContainer from '../../Components/circlesContainer/CirclesContainer'
 import Banner from '../../Components/banner/Banner'
+import IgBanner from '../../Components/instaFeed/IgBanner'
 
 
 const Home = () => {
   const { t } = useTranslation();
   return (
     <div className='home'>
-      <section className="banner__Section">
+      <section className="banner__section">
         <Banner />
       </section>
       <section className="presentation__section">
@@ -25,7 +25,7 @@ const Home = () => {
       </section>
       <section className="insta__section">
           <h1>{t("home.section-instagram.title")}</h1>
-        <InstagramFeed />
+        <IgBanner />
       </section>
     </div>
   )

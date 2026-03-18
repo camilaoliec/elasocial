@@ -1,4 +1,5 @@
 @use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
 footer{
     display: flex;
     flex-direction: row;
@@ -7,11 +8,18 @@ footer{
     gap: 40px; 
     padding: 30px;
     height: 339px;
+    @include tablet{
+        flex-direction: column;
+    }
     .footer__texts{
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        text-align: center;
+        @include mobile{
+            padding: 15px;
+        }
         .footer__texts-description{
             font-size: 21px;
             color: $orange-light;
@@ -27,6 +35,9 @@ footer{
         img{
             width: 32px;
             color: $orange-light;
+            @include mobile{
+                margin-bottom: 70px;
+            }
         }
     }
 }

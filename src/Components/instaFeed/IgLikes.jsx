@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchPostDetails } from "../../api/instagram";
 import Likes from "../../assets/icon_like.svg";
 
-const InstagramComments = ({ mediaId }) => {
+const IgLikes = ({ mediaId }) => {
   const [details, setDetails] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -57,4 +57,4 @@ const InstagramComments = ({ mediaId }) => {
   );
 };
 
-export default InstagramComments;
+export default IgLikes;

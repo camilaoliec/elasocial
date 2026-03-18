@@ -1,0 +1,200 @@
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+
+  .overlay.force-show {
+    opacity: 1;
+    background: transparent;
+  }
+    .embla__viewport{
+        overflow: hidden;
+    }
+    .embla__slide{
+        flex: 0 0 auto;
+    }
+    
+    .insta__section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: 768px){
+            padding: 30px 0px;
+        }
+        .igBanner{
+            height: auto;
+            max-width: 1380px;
+            position: relative;
+
+            .embla__viewport{
+                justify-content: center;
+                @include mobile{
+                    height: auto;
+                    overflow: visible;
+                }
+                .igBanner_container{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 15px;
+                    @media (max-width: 768px){
+                        flex-direction: column;
+                        gap: 10px;
+                    }
+                    // @include tablet{
+                    //     // flex-direction: column;
+                    //     // align-items: center;
+                    //     padding: 30px;
+                    // }
+                    @include mobile{
+                        gap: 8px;
+                        transform: none;
+                    }
+                    .igBanner_post{
+                        flex: 0 0 calc(25% - 11.25px); 
+                        min-width: 0;
+                        @media (max-width: 1000px) {
+                            flex: 0 0 calc(50% - 7.5px); 
+                            width: auto;
+                        }
+                        @include tablet{
+                            &:nth-child(n+4) {
+                            display: none;
+                        }
+                        }
+                        @include mobile{
+                            width: 100%;
+                            flex: none;
+                            
+                        }
+                        .ig_card{
+                            display: flex;
+                            height: auto;
+                            overflow: hidden;
+                            position: relative;
+                            aspect-ratio: 3 / 5;
+                            cursor: pointer;
+                            transition: transform 0.2s ease;
+                            flex-shrink: 0;
+                            @include mobile{
+                                width: 100%;
+                                flex: 0 0 calc(50% - 7.5px);
+                            }
+                            .ig_photo-wrapper, .ig_video-wrapper { 
+                                width: 100%;
+                                height: 100%;
+                                
+                                video {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                            .ig_photo-wrapper{
+                                aspect-ratio: 3/5;
+                                position: relative;
+                                
+                                @media (max-width: 1130px) {
+                                    //aspect-ratio: 2/4;
+                                    height: auto;
+                                }
+                                .ig_photo-img{
+                                    width: 100%;
+                                    height: 100%;
+                                    overflow: hidden;
+                                    position: relative;
+                                    //object-fit: cover;
+                                }
+                                .ig_photo-carouselBadge{
+                                    background: rgba(0, 0, 0, 0.248);
+                                    position: absolute;
+                                    top: 2%;
+                                    right: 2%;
+                                    border-radius: 4px;
+                                    img{
+                                        width: 40px;
+                                        padding: 4px 6px;
+                                    }
+                                }
+                                .overlay{
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    inset: 0;
+                                    background-color: #b6694dc5;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    padding: 15px;
+                                    opacity: 0;
+                                    transition: opacity 1.5s ease;
+                                    pointer-events: none;
+                                    height: 100%;
+                                    pointer-events: none;
+                                    .overlay_caption{
+                                        color: white;
+                                        // font-family: $font-secundary;
+                                        @media (max-width: 1264px) {
+                                            font-size: 15px;
+                                            // padding: 15px;
+                                        }
+                                    }
+                                }
+                                &:hover .overlay{
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+                            .ig_video-wrapper{
+                                .ig_video-icon{
+                                    img{
+                                        width: 40px;
+                                        height: 40px;
+                                        position: absolute;
+                                        top: 8px;
+                                        right: 8px;
+                                        background: rgba(0, 0, 0, 0.248);
+                                        color: white;
+                                        padding: 4px 6px;
+                                        font-size: 14px;
+                                        border-radius: 4px;
+                                        pointer-events: none;
+                                        z-index: 10;
+                                    }
+                                }
+                            }
+                            // .ig_post-photo{
+                            //     width: 100%;
+                            //     height: 100%;
+                            //     object-fit: cover;
+                            // }
+                            // .overlay{
+                            //     display: none;
+                            // }
+                        }
+                    }
+                }
+            }
+            .igButtons{
+                background-color: transparent;
+                z-index: 10;
+                cursor: pointer;
+                @include mobile {
+                    display: none; 
+                }
+                .embla__prev{
+                    position: absolute;
+                    left: 30px;
+                    top: 45%;
+                }
+                .embla__next{
+                    position: absolute;
+                    right: 0px;
+                    margin-right: 20px;
+                    top: 45%;
+                }
+            }
+        }
+    }
+    .insta_video_card{
+        width: 100%;
+        max-width: 100%;
+    }

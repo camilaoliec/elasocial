@@ -1,14 +1,19 @@
 @use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
 
 .box_language-selector{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    margin: 20px 70px 0 0;
+    margin: 20px 70px;
     gap: 9px;
     cursor: pointer;
     user-select: none;
+    @include tablet{
+        justify-content: center;
+        margin: 40px;
+    }
     p{
         font-weight: bolder;
         font-family: $font-primary;

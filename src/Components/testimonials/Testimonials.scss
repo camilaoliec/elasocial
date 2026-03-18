@@ -1,57 +1,94 @@
 @use "../../scss/variables" as *;
-
-
-.testimonial__container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 50px;
-    .testimonial-card{
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    padding: 25px;
-    border-radius: 20px;
-    background-color: $green-dark;
-    }
-    .testimonial-card{
-        position: relative;
+@use "../../scss/mixins" as *;
+.testimonials__section{
+    @media (max-width: 768px){
         display: flex;
-        gap: 0;
-        height: auto;
-        min-height: 380px;
-        width: 379px;
-        .icon_quotes{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 150px;
+        flex-direction: column;
+    }
+    background-color: $green-light;
+    h1{
+        color: $green-dark;
+    }
+    .testimonial__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 50px;
+        @media (max-width: 1246px){
+            flex-direction: column;
+            display: flex;
         }
-        p{
-            text-align: center;
-            padding: 30px 10px 0;
-            color: $color-background;
-            font-family: $font-primary;
-            font-size: 25px;
-            height: autopx;
-            flex-grow: 1;
-            margin-bottom: 5px;
-        }
-        h3{
-            text-align: center;
-            color: $green-light;
-            font-family: $font-secundary;
-            font-weight: 800;
-            margin: 10px 0 5px;
-            font-size: 25px;
-        }
-        h4{
-            text-align: center;
-            font-family: $font-secundary;
-            color: $green-light;
-            font-weight: 300;
-            font-size: 20px;
-            margin-bottom: 10px;
+        .testimonial-card{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            padding: 25px;
+            border-radius: 20px;
+            background-color: $green-dark;
+            position: relative;
+            display: flex;
+            gap: 0;
+            min-height: 380px;
+            width: 400px;
+            @media (max-width: 1246px){
+                width: 100%;
+                min-height: 300px;
+            }
+            @include mobile{
+                // border-radius: 0px;
+            }
+            .icon_quotes{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 150px;
+            }
+            p{
+                text-align: center;
+                padding: 50px 10px 0;
+                color: $color-background;
+                font-family: $font-primary;
+                font-size: 25px;
+                // flex-grow: 1;
+                margin-bottom: 5px;
+                height: auto;
+                @media (max-width:1246px){
+                    // font-size: 20px;
+                    // flex-grow: 0;
+                }
+                @media (max-width: 768px) {
+                    flex-grow: 0;
+                    font-size: 35px;
+                    font-weight: 300;
+                    padding-bottom: 20px;
+                }
+                @include mobile{
+                    font-size: 25px;
+                }
+            }
+            h3{
+                font-style: italic;
+                text-align: center;
+                color: $green-light;
+                font-family: $font-secundary;
+                font-weight: 800;
+                margin: 10px 0 5px;
+                font-size: 25px;
+                
+            }
+            h4{
+                text-align: center;
+                font-family: $font-secundary;
+                color: $green-light;
+                font-weight: 300;
+                font-size: 20px;
+                margin-bottom: 10px;
+                @media (max-width: 768px) {
+                    margin-bottom: 20px;
+                }
+            }
+            
         }
     }
 }
+

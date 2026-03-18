@@ -1,4 +1,4 @@
-export const fetchInstagramPosts = async (limit = 4) => {
+export const fetchInstagramPosts = async (limit = 12) => {
   const token = import.meta.env.VITE_INSTAGRAM_TOKEN;
   const userId = import.meta.env.VITE_INSTAGRAM_USER_ID;
 
@@ -19,9 +19,8 @@ export const fetchInstagramPosts = async (limit = 4) => {
 // Pega username + foto do perfil
 export const fetchInstagramProfile = async () => {
   const token = import.meta.env.VITE_INSTAGRAM_TOKEN;
-  const userId = import.meta.env.VITE_INSTAGRAM_USER_ID;
-
-  const url = `https://graph.instagram.com/${userId}?fields=username,profile_picture_url&access_token=${token}`;
+  
+  const url = `https://graph.instagram.com/me?fields=username,profile_picture_url&access_token=${token}`;
 
   const res = await fetch(url);
   return res.json();
@@ -31,7 +30,7 @@ export const fetchInstagramProfile = async () => {
 export const fetchPostDetails = async (mediaId) => {
   const token = import.meta.env.VITE_INSTAGRAM_TOKEN;
 
-  const url = `https://graph.instagram.com/${mediaId}?fields=like_count,comments{id,text,username,timestamp}&access_token=${token}`;
+  const url = `https://graph.instagram.com/${mediaId}?fields=like_count,comments{id,text,username,timestamp}&access_token=${token}&limit={limit}`;
 
   const res = await fetch(url);
   const data = await res.json();
@@ -40,11 +39,29 @@ export const fetchPostDetails = async (mediaId) => {
   // data.comments.data -> array com {username, text}
 
   if (data.error) {
-    console.error("Erro ao buscar detalhes do post:", data.error.message);
-    return { like_count: 0, comments: { data: [] } };
+    console.error("Erro ao buscar post:", data.error.message);
+    return [];
   }
 
   return data;
+};
+
+export const fetchPostLikes = async (mediaId) => {
+  const token = import.meta.env.VITE_INSTAGRAM_TOKEN;
+
+  const url = `https://graph.instagram.com/${mediaId}?fields=like_count&access_token=${token}`;
+  try{
+    const res = await fetch(url);
+    const data = await res.json();
+    if(data.error){
+      console.error("Erro ao buscar likes:", data.error.message);
+      return null;
+    }
+    return data.like_count;
+  }catch (err){
+    console.error("Erro na requisicao",err);
+    return null;
+  }
 };
 
 //todas as imagens de um carrossel

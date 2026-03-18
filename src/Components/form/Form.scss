@@ -3,31 +3,43 @@
 form{
     display: flex;
     flex-direction: column;
-    border: 1px solid  $orange-dark;
-    border-radius: 20px;
-    width: 600px;
+    border: 2px solid  $orange-light;
+    border-radius: 5px;
+    min-width: 600px;
     padding: 40px;
     gap: 15px;
-    margin-left: 200px;
-    background-color: $orange-light;
     font-family: $font-secundary;
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 23px;
     label{
-        color: white;
+        color: $orange-light;
     }
     input{
         height: 30px;
+        padding: 20px 0;
+        margin-bottom: 15px;
+        background-color: transparent;
+        border: 2px solid $orange-light;
     }
     input::placeholder, textarea::placeholder{
         padding: 10px;
         color: $orange-light;
         font-size: 16px;
         font-family: $font-primary;
-        font-weight: 600;
+        font-weight: 4500;
+    }
+    textarea{
+        background-color: transparent;
+        border: 2px solid $orange-light;
+        margin-bottom: 20px;
     }
     .contact__submit{
         width: 200px;
-        height: 30px;
         align-self: self-end;
+        background-color: transparent;
+        border: 2px solid $orange-light;
+        color: $orange-light;
+        padding: 10px;
+        font-size: 18px;
     }
 }

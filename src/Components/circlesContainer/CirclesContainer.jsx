@@ -1,4 +1,4 @@
-import CircleLink from '../circleLink/CircleLink';
+import CircleLink from './CircleLink';
 import { useTranslation } from "react-i18next";
 import "./CirclesContainer.scss"
 

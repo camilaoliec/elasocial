@@ -16,7 +16,7 @@ const Banner = () => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop:true })
     const [selectedIndex, setSelectedIndex] = useState(0)
 
-    // funcao pra avancar o slide automaticamente
+    // Avancar o slide automaticamente
     const scrollNext = useCallback(() => {
         if (emblaApi) emblaApi.scrollNext()
     }, [emblaApi])
@@ -59,14 +59,14 @@ const Banner = () => {
                 <div className="banner_slide"><img src={img2} alt="" /></div>
                 <div className="banner_slide"><img src={img3} alt="" /></div>
             </div>
+            <img src={arrowLeft} alt="previous" className="banner_arrow left" onClick={() => emblaApi && emblaApi.scrollPrev()} />
+            <img src={arrowRight} alt="next" className="banner_arrow right" onClick={() => emblaApi && emblaApi.scrollNext()} />
         </div>
-        <img src={arrowLeft} alt="previous" className="banner_arrow left" onClick={() => emblaApi && emblaApi.scrollPrev()} />
-        <img src={arrowRight} alt="next" className="banner_arrow right" onClick={() => emblaApi && emblaApi.scrollNext()} />
-        <div className="banner_dots">
-            {[0,1,2].map(i => (
-                <button key={i} className={`dot ${selectedIndex === i ? "active" : ""}`} onClick={() => emblaApi && emblaApi.scrollTo(i)}
-            />
-        ))}
+            <div className="banner_dots">
+                {[0,1,2].map(i => (
+                    <button key={i} className={`dot ${selectedIndex === i ? "active" : ""}`} onClick={() => emblaApi && emblaApi.scrollTo(i)}
+                />
+            ))}
         </div>
     </div>
   )

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import "./CircleLink.scss"
+// import "./CircleLink.scss"
 
 const CircleLink =({
     to,
@@ -8,12 +8,11 @@ const CircleLink =({
     imgAlt,
     label,
 }) => (
-    <div className="circle_link">
         <Link to={to} aria-label={`Ir para a pagina ${label}`} className="circle_link-anchor">
             <img src={imgSrc} alt={imgAlt} className="circle_link-img" loading="lazy"/>
-        </Link>
         <p className="circle_link-label" to={to}>{label}</p>
-    </div>
+        </Link>
+    
 );
 CircleLink.propTypes = {
     to: PropTypes.string.isRequired,

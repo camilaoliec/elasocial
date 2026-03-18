@@ -1,0 +1,181 @@
+@use "../../scss/variables" as *;
+@use "../../scss/mixins" as *;
+.lightbox_overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(223 229 215 / 58%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+    .lightbox_nav {
+        pointer-events: all;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 50px;
+        position: absolute;
+        cursor: pointer;
+        z-index: 1000;
+        margin: 20px;
+        
+        img {
+            width: 30px;
+            pointer-events: none;
+        }
+    }
+    .global-left {
+        left: 20px;
+    }
+    .global-right {
+        right: 20px;
+    }
+    .lightbox_container {
+        position: relative;
+        background-color: white;
+        max-width: 1200px;
+        height: 90%;
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        @include mobile{
+            flex-direction: column;
+        }
+        .lightbox_media {
+            height: 100%;
+            min-width: 45%;
+            position: relative;
+            @include mobile{
+                height: 80%;
+            }
+            .lightbox_img,
+            .lightbox_video {
+                width: 100%;
+                height: 100%;
+                aspect-ratio: 3/5;
+                max-height: 100%;
+            }
+            .lightbox_img {
+                object-fit: container;
+            }
+            .lightbox_video {
+                object-fit: cover;
+            }
+        }
+        .lightbox_carousel_nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            padding: 20px;
+            z-index: 10;
+            color: $green-dark;
+            background-color: $green-light;
+        }
+        .lightbox_carousel_nav.left {
+            left: 20px;
+        }
+        .lightbox_carousel_nav.right {
+            right: 20px;
+        }
+        .lightbox_info {
+            width: 55%;
+            height: auto;
+            margin: 30px;
+            overflow-y: auto;
+            @include mobile{
+                width: 100%;
+                padding: 0px;
+                margin: 15px;
+            }
+            .lightbox_x {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                color: black;
+                background-color: transparent;
+                padding: 0;
+                margin: 20px;
+                border: none;
+                font-size: 30px;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            .lightbox_header {
+                height: 150px;
+                @include mobile{
+                    height: auto;
+                }
+                .lightbox_user {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    padding-bottom: 20px;
+                    @include mobile{
+                        padding: 0px;
+                        gap: 10px;
+                    }
+                    img {
+                        width: 110px;
+                        border-radius: 50%;
+                        @include mobile{
+                            width: 50px;
+                        }
+                    }
+                    .lightbox_username {
+                        font-weight: bold;
+                    }
+                }
+            }
+            .lightbox_caption {
+                overflow-wrap: break-word;
+            }
+            .lightbox_content {
+                p {
+                    max-height: 400px;
+                }
+                .likes {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 5px;
+                    margin: 10px 0;
+                    padding: 10px 0;
+                    // img {
+                    //     width: 25px;
+                    // }
+                    p {
+                        font-size: 20px;
+                    }
+                }
+                .lightbox_likes_row {
+                    border-top: 1px rgb(212, 205, 205) solid;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding-top: 15px;
+                    gap: 10px;
+                    img {
+                        width: 25px;
+                    }
+                    p {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
