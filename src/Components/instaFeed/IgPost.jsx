@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import IgMediaDisplay from "./IgMediaDisplay";
 import icon_ig_carousel from "../../assets/icon-carousel.svg";
-import "./igBanner.scss";
+import "./IgBanner.scss";
 
 const renderCaption = (caption) => {
     if (!caption) return "";
